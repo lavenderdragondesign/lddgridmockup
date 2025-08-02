@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LavenderDragonDesign's Grid Mockup Generator v1.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom scrollbar for webkit browsers to support a light theme */
+        .scrollbar-thin::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .scrollbar-thin::-webkit-scrollbar-track {
+            background: #e5e7eb; /* scrollbar-track-gray-200 */
+        }
+
+        .scrollbar-thin::-webkit-scrollbar-thumb {
+            background-color: #9ca3af; /* scrollbar-thumb-gray-400 */
+            border-radius: 10px;
+            border: 2px solid #e5e7eb; /* scrollbar-track-gray-200 */
+        }
+        
+        /* Custom animation for fade-in effect */
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out forwards;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
