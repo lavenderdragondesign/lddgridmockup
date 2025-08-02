@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { CANVAS_WIDTH, CANVAS_HEIGHT, GOOGLE_FONTS, LAVENDER_DRAGON_LOGO_B64, FONT_FAMILIES } from './constants';
+import { CANVAS_WIDTH, CANVAS_HEIGHT, GOOGLE_FONTS, FONT_FAMILIES } from './constants';
 import ControlPanel from './components/ControlPanel';
 import ImageThumbnails from './components/ImageThumbnails';
 import { Icon } from './components/ui/Icon';
@@ -142,11 +142,6 @@ function App() {
   
   // --- Effects ---
 
-  // Splash screen timer
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 8000);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     try {
@@ -840,8 +835,6 @@ function App() {
       }
   };
 
-  if (isLoading) {
-  }
 
   return (
     <div className="flex h-screen bg-gray-100 dark:bg-gray-950 text-gray-800 dark:text-gray-100 font-sans">
